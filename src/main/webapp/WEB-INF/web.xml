@@ -19,4 +19,14 @@
     <servlet-name>loginServlet</servlet-name>
     <url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>paymentServlet</display-name>
+    <servlet-name>paymentServlet</servlet-name>
+    <servlet-class>com.oop.servlet.paymentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>paymentServlet</servlet-name>
+    <url-pattern>/paymentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
