@@ -29,4 +29,14 @@
     <servlet-name>paymentServlet</servlet-name>
     <url-pattern>/paymentServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>loadPaymentServlet</display-name>
+    <servlet-name>loadPaymentServlet</servlet-name>
+    <servlet-class>com.oop.servlet.loadPaymentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loadPaymentServlet</servlet-name>
+    <url-pattern>/loadPaymentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
