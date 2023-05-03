@@ -8,8 +8,10 @@
 <link rel="stylesheet" href="css/index.css"/>
 <meta charset="UTF-8">
 <meta charset="ISO-8859-1">
-<title>make payment</title>
+<title>Payment</title>
 </head>
+<body>
+
 <body>
     <%@ include file = "jsp/header.jsp" %>
     
