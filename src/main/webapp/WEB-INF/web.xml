@@ -39,4 +39,24 @@
     <servlet-name>loadPaymentServlet</servlet-name>
     <url-pattern>/loadPaymentServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>loadPaymentServlett</display-name>
+    <servlet-name>loadPaymentServlett</servlet-name>
+    <servlet-class>com.oop.servlet.loadPaymentServlett</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loadPaymentServlett</servlet-name>
+    <url-pattern>/loadPaymentServlett</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>updatePaymentServlet</display-name>
+    <servlet-name>updatePaymentServlet</servlet-name>
+    <servlet-class>com.oop.servlet.updatePaymentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updatePaymentServlet</servlet-name>
+    <url-pattern>/updatePaymentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

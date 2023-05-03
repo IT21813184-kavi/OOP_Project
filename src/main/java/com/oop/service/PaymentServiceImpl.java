@@ -3,7 +3,9 @@ package com.oop.service;
 import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -61,8 +63,59 @@ public class PaymentServiceImpl implements iPaymentService {
 					System.out.println(e);
 				}
 			}
+			
+		    }				
 
-			} 
-				
+    /**Get payment details*/
+    public ArrayList<Payment_details> getPaymentByCustomer(String NIC){
+    	ArrayList<Payment_details> arrayList = new ArrayList<Payment_details>();
+    	
+    	try {
+    		connection = DBConnection.getDBConnection();
+    		preparedStatement = connection.prepareStatement("select p.* from Payment_details p,");
+    		preparedStatement.setString(1, NIC);
+    		
+    		System.out.println("preparedStatement");
+    		
+    		ResultSet resultSet = preparedStatement.executeQuery();
+    		
+    		while (resultSet.next()) {
+    			
+    			Payment_details payment = new Payment_details();
+    			
+    			payment.setNIC(resultSet.getString(0));
+    			payment.setName(resultSet.getString(0));
+    			payment.setEmail(resultSet.getString(0));
+    			payment.setAddress(resultSet.getString(0));
+    			payment.setCity(resultSet.getString(0));
+    			payment.setState(resultSet.getString(0));
+    			payment.setBankname(resultSet.getString(0));
+    			payment.setCardname(resultSet.getString(0));
+    			payment.setCardnumber(resultSet.getString(0));
+    			payment.setExpmonth(resultSet.getString(0));
+    			payment.setExpyear(resultSet.getString(0));
+    			payment.setCvv(resultSet.getString(0));
+    			
+    			arrayList.add(payment);s
+    		}
+    	}
+   
+    catch (SQLException | ClassNotFoundException e) {
+		log.log(Level.SEVERE, e.getMessage());
+		System.out.println(e);
+		
+	} finally {
+		try {
+			if (preparedStatement != null) {
+				preparedStatement.close();
 			}
-
+			if (connection != null) {
+				connection.close();
+			}
+		} catch (SQLException e) {
+			log.log(Level.SEVERE,e.getMessage());
+			System.out.println(e);
+     }
+}
+	return arrayList;
+    }
