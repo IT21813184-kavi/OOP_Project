@@ -7,7 +7,9 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import com.oop.model.Payment_details; 
+import com.oop.model.Payment_details;
+import com.oop.service.PaymentServiceImpl;
+import com.oop.service.iPaymentService; 
 
 public class paymentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -30,6 +32,9 @@ public class paymentServlet extends HttpServlet {
 		payment.setExpyear(request.getParameter("expyear"));
 		payment.setCvv(request.getParameter("cvv"));
 		
+		
+		iPaymentService iaddpaymentservice = new PaymentServiceImpl();
+		iaddpaymentservice.addPaymentdetails(payment);
 		
 		
 		

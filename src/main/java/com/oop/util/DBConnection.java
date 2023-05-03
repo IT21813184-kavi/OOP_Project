@@ -11,7 +11,7 @@ public class DBConnection {
 		
 		if(conn == null || conn.isClosed()) {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ovsafsms","root","Root");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/ovsafsms","root","root");
 		}
 		
 		return conn;
