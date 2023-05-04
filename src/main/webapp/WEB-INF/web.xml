@@ -59,4 +59,14 @@
     <servlet-name>updatePaymentServlet</servlet-name>
     <url-pattern>/updatePaymentServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>deletePaymentServlet</display-name>
+    <servlet-name>deletePaymentServlet</servlet-name>
+    <servlet-class>com.oop.servlet.deletePaymentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deletePaymentServlet</servlet-name>
+    <url-pattern>/deletePaymentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
