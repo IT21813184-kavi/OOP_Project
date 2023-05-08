@@ -96,7 +96,7 @@ public class PaymentServiceImpl implements iPaymentService {
     			payment.setExpyear(resultSet.getString(0));
     			payment.setCvv(resultSet.getString(0));
     			
-    			arrayList.add(payment);s
+    			arrayList.add(payment);
     		}
     	}
    
@@ -122,3 +122,51 @@ public class PaymentServiceImpl implements iPaymentService {
     
     /**update payment details*/
     
+    public void updatePaymentdetails(Payment_details payment) {
+    	
+    	try {
+    		
+    	}
+    	catch (SQLException | ClassNotFoundException e) {
+    		log.log(Level.SEVERE, e.getMessage());
+    		System.out.println(e);
+    		
+    	} finally {
+    		try {
+    			if (preparedStatement != null) {
+    				preparedStatement.close();
+    			}
+    			if (connection != null) {
+    				connection.close();
+    			}
+    		} catch (SQLException e) {
+    			log.log(Level.SEVERE,e.getMessage());
+    			System.out.println(e);
+         }
+    }
+    	
+    	
+    }
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    }

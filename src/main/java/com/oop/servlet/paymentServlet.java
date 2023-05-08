@@ -36,8 +36,12 @@ public class paymentServlet extends HttpServlet {
 		iPaymentService iaddpaymentservice = new PaymentServiceImpl();
 		iaddpaymentservice.addPaymentdetails(payment);
 		
+		iPaymentService igetpaymentservice = new PaymentServiceImpl();
+		igetpaymentservice.getPaymentByCustomer(payment);
 		
 		
+		iPaymentService iupdatepaymentservice = new PaymentServiceImpl();
+		iupdatepaymentservice.updatePaymentdetails(payment);
 		
 	}
 

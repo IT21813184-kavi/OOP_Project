@@ -12,12 +12,15 @@ public interface iPaymentService {
 	public void addPaymentdetails(Payment_details payment);
 	
 	/**Get Payment details*/
-	public static  ArrayList<Payment_details> getPaymentByCustomer(String NIC){
-    	ArrayList<Payment_details> arrayList = new ArrayList<Payment_details>();
+	 public static ArrayList<Payment_details> getPaymentByCustomer(String NIC){
+	    	ArrayList<Payment_details> arrayList = new ArrayList<Payment_details>();
+	 }
     	
-	
+    	/**update Payment details*/
+    public void updatePaymentdetails(Payment_details payment);
+    
 	/**delete a payment details*/
 	//public void deletePaymentdetails(String PID);
 	
-	//public Payment_details getPaymentdetails(String PID);
+	
 }
