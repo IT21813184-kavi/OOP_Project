@@ -126,6 +126,9 @@ public class PaymentServiceImpl implements iPaymentService {
     	
     	try {
     		
+    		connection = DBConnection.getDBConnection();
+			preparedStatement = connection.prepareStatement("update Payment_details set name=?,email=?,bankname=?,cardname=?,cardnumber=? where NIC=?");
+			connection.setAutoCommit(false);
     	}
     	catch (SQLException | ClassNotFoundException e) {
     		log.log(Level.SEVERE, e.getMessage());
